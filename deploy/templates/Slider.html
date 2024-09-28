@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='tesslide.css')}}">
+    <title>Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <header class="header">
+        <a href="#" class="logo">GoldFarb 1</a>
+
+        <nav class="navbar">
+            <a href="/">Beranda</a>
+            <a href="/slider">Slider</a>
+            <a href="/about">About</a>
+        </nav>
+
+    </header>
+
+
+
+    <div class="containerr">
+
+        <!-- Flex Box Kiri -->
+
+        <div class="kotakkiri">
+
+            <h2>Faktor Efektivitas Karyawan</h2>
+            <h6><br><br> Temukan Prediksi Efektivitas Kinerja Karyawan dengan
+                <br> <strong>GoldFarb 1</strong>
+            </h6>
+
+            <!-- Slider -->
+
+            <form action="/predict" method="POST">
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" name="age" class="form-control" id="age" min="18" max="60">
+                    <div id="marital_status" class="form-text">usia range 18 - 60</div>
+                </div>
+                <div class="mb-3">
+                    <label for="job_level" class="form-label">Job Level</label>
+                    <input type="number" name="job_level" class="form-control" id="Job Level" min="1" max="5">
+                    <div id="marital_status" class="form-text">Tingkat pekerjaan 1 - 5</div>
+                </div>
+                <div class="mb-3">
+                    <label for="marital_status" class="form-label">Marital Status</label>
+                    <input type="number" name="marital_status" class="form-control" id="marital_status" min="0" max="2">
+                    <div id="marital_status" class="form-text">Status Pernikahan (0 = Cerai, 1 = Single, 2 = Menikah)
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="monthly_income" class="form-label">Monthly Income</label>
+                    <input type="number" name="monthly_income" class="form-control" id="monthly_income">
+                    <div id="monthly_income" class="form-text">Gaji Bulanan</div>
+                </div>
+                <div class="mb-3">
+                    <label for="overtime" class="form-label">overtime</label>
+                    <input type="number" name="overtime" class="form-control" id="overtime" min="0" max="1">
+                    <div id="marital_status" class="form-text">Lembur (0 = Tidak, 1 = Iya)</div>
+                </div>
+                <div class="mb-3">
+                    <label for="total_working_years" class="form-label">Total Working Years</label>
+                    <input type="number" name="total_working_years" class="form-control" id="total_working_years"
+                        min="0" max="40">
+                    <div id="marital_status" class="form-text">Total Tahun Bekerja (0 - 40 Tahun)</div>
+                </div>
+                <div class="mb-3">
+                    <label for="years_in_Current_Role" class="form-label">Years in Current Role</label>
+                    <input type="number" name="years_in_Current_Role" class="form-control" id="years_in_Current_Role"
+                        min="0" max="18">
+                    <div id="marital_status" class="form-text">Total Tahun Bekerja (0 - 18 Tahun)</div>
+                </div>
+
+                <div class="btn">
+                    <div>
+
+                        <input type="submit" value="Temukan" id="prediksi_submit" class="tombol-aktif animasi biru"></a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+        <!-- <div>
+                <p class="desc7">Years With Current Manager</p>
+
+                <div class="main7">
+
+                    <input type="range" min="0" max="100" value="50" id="slider7" oninput="updateSliderValue7()">
+                    <div id="selector7">
+                        <div class="SelectBtn7"></div>
+                        <div id="SelectValue7"></div>
+                    </div>
+                    <div id="ProgressBar7"></div>
+                    <div id="sliderValue7"></div>
+                </div>
+            </div> -->
+
+        <!-- Button -->
+
+
+        <!-- Flex Box Kanan -->
+
+        <div class="kotakkanan">
+            <div class="textkn">
+
+                <H1>Hasil Prediksi</H1>
+
+            </div>
+
+            <div id="img1">
+                <!-- <img class="gambar" src="karyawan.jpg"> -->
+            </div>
+
+            <div id="hasil_prediksi" align="center">
+                <!-- tampilan hasil -->
+                {{ prediction_text }}
+
+            </div>
+
+            <div>
+
+                {% if prediction_text == 1 %}
+                
+                <img src="{{url_for('static', filename='thumbyes.jpeg')}}" >
+                <h6>Hasil Prediksi Menunjukan Faktor Yang Diinputkan Berpengaruh Pada Efektivitas Seorang Karyawan</h6>
+                
+                {% endif %}
+
+                {% if prediction_text == 0 %}
+                
+                <img src="{{url_for('static', filename='thumbno.jpeg')}}" >
+                <h6>Hasil Prediksi Menunjukan Faktor Yang Diinputkan Tidak Berpengaruh Pada Efektivitas Seorang Karyawan</h6>
+                
+                {% endif %}
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+    </script>
+
+    <script>
+        const slideValue = document.querySelector("span");
+        const inputSlider = document.querySelector("input");
+        inputSlider.oninput = (() => {
+            let value = inputSlider.value;
+            slideValue.textContent = value;
+            //   slideValue.style.left = (value/2) + "%";
+            slideValue.classList.add("show");
+        });
+        inputSlider.onblur = (() => {
+            slideValue.classList.remove("show");
+        });
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o6jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

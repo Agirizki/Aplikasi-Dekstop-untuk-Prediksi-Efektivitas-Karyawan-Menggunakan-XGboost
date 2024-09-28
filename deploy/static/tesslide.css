@@ -1,0 +1,1086 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: sans-serif;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+
+}
+
+
+.containerr {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 120px auto;
+    padding: 5px;
+    flex: wrap;
+    
+    
+}
+
+.kotakkiri {
+    flex: 50%;
+    margin-left: 60px;
+   
+
+}
+
+.kotakkiri .form-control{
+    width: 70%;
+}
+
+
+.kotakkiri h2 {
+    margin-left: 18px;
+}
+
+.kotakkanan {
+    flex: 50%;
+
+}
+
+img{
+    width: 550px
+
+}
+
+
+/* Slider ke 1 */
+/* .desc {
+    margin-top: 50px;
+
+}
+
+.main {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    transform: translateX(50%);
+    z-index: 3;
+}
+
+.SelectBtn {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar {
+    width: 0;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+    
+}
+
+.text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke dua (2) */
+/* .desc1 {
+    margin-top: 0px;
+
+}
+
+.main1 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue1 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider1 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector1 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn1 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue1 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue1::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar1 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke tiga (3) */
+/* .desc2 {
+    margin-top: 0px;
+
+}
+
+.main2 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue2 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider2 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector2 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn2 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue2 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue2::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar2 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke empat (4) */
+/* .desc3 {
+    margin-top: 0px;
+
+}
+
+.main3 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue3 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider3 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector3 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn3 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue3 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue3::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar3 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke lima (5) */
+/* .desc4 {
+    margin-top: 0px;
+
+}
+
+.main4 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue4 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider4 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider4::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector4 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn4 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue4 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue4::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar4 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke enam (6) */
+/* .desc5 {
+    margin-top: 0px;
+
+}
+
+.main5 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue5 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider5 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider5::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector5 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn5 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue5 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue5::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar5 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke tujuh (7) */
+/* .desc6 {
+    margin-top: 0px;
+
+}
+
+.main6 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue6 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider6 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider6::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector6 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn6 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue6 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue6::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar6 {
+    width: 50%;
+    height: 4px;
+    background: #212b2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+/* slider ke delapan (8) */
+/* .desc7 {
+    margin-top: 0px;
+
+}
+
+.main7 {
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#sliderValue7 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Pacifico', cursive;
+}
+
+#slider7 {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #d3d3d3;
+}
+
+#slider7::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+
+}
+
+#selector7 {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectBtn7 {
+    height: 25px;
+    width: 25px;
+    background-color: #393E6F;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+
+#SelectValue7 {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: #8b9ed3;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#SelectValue7::after {
+    content: '  ';
+    border-top: 12px solid #8b9ed3;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+}
+
+#ProgressBar7 {
+    width: 50%;
+    height: 4px;
+    background: black;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+}
+
+.text7 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.range{
+  height: 80px;
+  width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 65px 0 45px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+.sliderValue{
+  position: relative;
+  width: 100%;
+}
+.sliderValue span{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -40px;
+  left: 150px;
+  line-height: 55px;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1);
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #664AFF;
+  border: 3px solid #fff;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.field .value{
+  position: absolute;
+  font-size: 18px;
+  color: #664AFF;
+  font-weight: 600;
+}
+.field .value.left{
+  left: -22px;
+}
+.field .value.right{
+  right: -43px;
+}
+.range input{
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  z-index: 2222;
+}
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
+.range input::-moz-range-thumb{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
+.range input::-moz-range-progress{
+  background: #664AFF; 
+  /* this progress background is only shown on Firefox */
+}
+
+/* button */
+
+.btn {
+    margin: 0px;
+    justify-content: center;
+    padding: 0;
+    bottom: -15px;
+    margin-left: -15px;
+
+}
+
+.animasi {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.tombol-aktif {
+    padding: 8px 185px;
+    border-radius: 7px;
+    float: left;
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.biru {
+    background-color: #393E6F;
+    border-bottom: 5px solid #181d4e;
+    text-shadow: 0px -2px #181d4e;
+}
+
+.tombol-aktif:active {
+    transform: translate(100px, 52px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+
+/* Kotak Kanan */
+
+.textkn {
+    margin-top: 100px;
+    margin-left: 180px;
+}
+
+/* gambar */
+
+.img1 {
+    margin: 0px auto;
+    justify-content: center;
+}
+
+.gambar {
+    margin-left: 70px;
+    width: 500px;
+}
