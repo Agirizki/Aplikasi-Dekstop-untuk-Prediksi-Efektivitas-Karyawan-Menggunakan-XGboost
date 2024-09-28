@@ -1,0 +1,2 @@
+# Aplikasi-Dekstop-untuk-Prediksi-Efektivitas-Karyawan-Menggunakan-XGboost
+Mengembangkan aplikasi desktop untuk memprediksi efektivitas karyawan menggunakan algoritma XGBoost. Saya bertanggung jawab atas pencarian dataset, data Preprocessing, pemilihan fitur yang relevan, serta pembuatan dan pelatihan model machine learning. Proyek ini bertujuan membantu perusahaan mengevaluasi kinerja karyawan secara lebih akurat.
